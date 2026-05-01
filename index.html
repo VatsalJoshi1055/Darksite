@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Very Important Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell" data-state="idle">
+      <canvas id="matrix-rain" aria-hidden="true"></canvas>
+      <div class="noise" aria-hidden="true"></div>
+      <div class="scanlines" aria-hidden="true"></div>
+      <aside class="code-wall code-wall-left" aria-hidden="true">
+        <pre id="left-code"></pre>
+      </aside>
+      <aside class="code-wall code-wall-right" aria-hidden="true">
+        <pre id="right-code"></pre>
+      </aside>
+
+      <main class="terminal-stage" aria-live="polite">
+        <section class="login-panel" aria-label="Secure login">
+          <p class="system-warning">very important details</p>
+          <h1>enter you name</h1>
+          <form id="login-form" autocomplete="off">
+            <label class="sr-only" for="name-input">Enter your name</label>
+            <input
+              id="name-input"
+              name="name"
+              type="text"
+              minlength="1"
+              maxlength="28"
+              placeholder="write it here"
+              aria-describedby="entry-hint"
+              required
+            />
+            <button type="submit">Initialize</button>
+          </form>
+          <p id="entry-hint" class="entry-hint">Identity scan waiting...</p>
+        </section>
+      </main>
+
+      <section class="breach-screen" aria-hidden="true">
+        <div class="breach-grid" id="breach-grid"></div>
+        <p class="breach-status">ACCESSING SHADOW TERMINAL</p>
+      </section>
+
+      <section class="success-screen" aria-hidden="true">
+        <p class="success-kicker">successfully logged in</p>
+        <h2 id="final-message"></h2>
+        <button id="go-back-button" class="back-button" type="button" aria-label="Go back">
+          <span class="back-arrow" aria-hidden="true"></span>
+        </button>
+        <div id="ghost-jump" class="ghost-jump" aria-hidden="true">
+          <div class="ghost-portrait">
+            <img src="assets/ghost-face-cutout.png" alt="" />
+          </div>
+        </div>
+        <audio id="ghost-scream" preload="auto">
+          <source src="assets/ghost-scream.m4a" type="audio/mp4" />
+        </audio>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
